@@ -1,0 +1,42 @@
+/*code for half adder using full adder*/
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    11:47:35 07/24/2024 
+// Design Name: 
+// Module Name:    half_adder 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+/* here I make half addre module
+that can be used in full addder*/ 
+module half_adder(sum,carry,a,b
+);
+    input wire a,b;
+	 output wire sum,carry;
+    assign sum = a ^ b;
+    assign carry = a & b;
+   
+endmodule
+
+/* here i call half addre as a function also known as instation
+in verilog , To buld full adder i use twe half adder */
+
+module full_adder(input wire a,b,cin, output wire sum_out,carry_out);
+wire t,k,c;
+half_adder G1(t,c,a,b);
+half_adder G2(sum_out,k,t,cin);
+or(carry_out,k,c);
+endmodule
+
