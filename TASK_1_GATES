@@ -1,0 +1,40 @@
+/*VERILOG LOG CODE FOR ALL GATES USING GATE LEVEL SCHEMATIC*/
+
+
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date:    09:31:58 07/24/2024 
+// Design Name: 
+// Module Name:    ALLGATE 
+// Project Name: 
+// Target Devices: 
+// Tool versions: 
+// Description: 
+//
+// Dependencies: 
+//
+// Revision: 
+// Revision 0.01 - File Created
+// Additional Comments: 
+//
+//////////////////////////////////////////////////////////////////////////////////
+module ALLGATES(input a,b,output [6:0] c);
+
+and G1(c[0],a,b);
+
+or G2(c[1],a,b);
+
+not G3(c[2],a);
+
+nand G4(c[3],a,b);
+
+nor G5(c[4],a,b);
+
+xor G6(c[5],a,b);
+
+xnor G7(c[6],a,b);
+
+endmodule
